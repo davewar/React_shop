@@ -62,7 +62,7 @@ const Login = () => {
            
       });
       const data = await res.json();
-      console.log(data);
+      // console.log(data);
 
       if (data.errors) {
 
@@ -77,7 +77,7 @@ const Login = () => {
           localStorage.setItem('firstLogin', true)
           setAccessToken(data.accesstoken)
    
-            history.push("products")
+            history.push("/products")
 
           // window.location.href = "/products"
                
@@ -110,7 +110,7 @@ const Login = () => {
                             <input
                               type="email"
                               name="email"
-                              className={ emailErr ? "form-control-lg is-invalid":
+                              className={ emailErr ? "form-control is-invalid":
                                     !emailErr && email.length ? "form-control is-valid":"form-control"
                                 }
                           
